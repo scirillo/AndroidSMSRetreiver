@@ -5,10 +5,10 @@ OptionParser.new do |opts|
   opts.banner = 'Usage: google_play_sign.rb [options]'
 
   Option = Struct.new('Option', :arg_name, :arg_description, :symbol)
-  [ Option.new('--package com.vetahealth.android',
+  [ Option.new('--package com.scirillo.sample',
                'Your app package, e.g com.test.app',
                :package),
-    Option.new('--google-play-key upload_cert.der',
+    Option.new('--google-play-key cert.der',
                'Google Play public key (in DER format) used to sign release app',
                :gp_key),
     Option.new('--keystore certificate.jks',
@@ -17,7 +17,7 @@ OptionParser.new do |opts|
     Option.new('--keystore-password passwordsample',
                'Password to the keystore - required only when option "--keystore" is specified',
                :keystore_password),
-    Option.new('--key-alias vetakey',
+    Option.new('--key-alias aliaskey',
                'Alias of key in the keystore - required only when option "--keystore" is specified',
                :key_alias)
   ].each do |option|
