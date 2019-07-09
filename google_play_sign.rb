@@ -14,7 +14,7 @@ OptionParser.new do |opts|
     Option.new('--keystore certificate.jks',
                'Path to keystore (.jks file)',
                :keystore),
-    Option.new('--keystore-password 214del',
+    Option.new('--keystore-password passwordsample',
                'Password to the keystore - required only when option "--keystore" is specified',
                :keystore_password),
     Option.new('--key-alias vetakey',
